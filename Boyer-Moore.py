@@ -1,0 +1,1 @@
+#def Boyer_Moore(pattern, texte)
