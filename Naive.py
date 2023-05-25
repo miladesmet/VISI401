@@ -1,3 +1,20 @@
+#--------------------------------------------------------------------------------------------------------------------
+#                                       Implémentation de l'algo naïf
+#--------------------------------------------------------------------------------------------------------------------
+
+"""Pour bien commencer et comprendre l'utilité des algorithmes suivant rien de mieux que de commencer par la méthode naïve.
+ Même si dans beaucoup de cas elle est très peu efficace il faut parfois la garder sous le coude, car sa simplicité
+ d'implémentation mais surtout le fait qu'elle ne requière aucun prétraitement peu dans certains cas en faire la solution
+ la plus efficace. Ceci est souvent le cas pour rechercher un pattern dans un texte "court".
+
+ Pour en savoir plus sur l'algorithme visitez cette page :
+ https://pixees.fr/informatiquelycee/n_site/nsi_term_algo_boyer.html (Seulement au début) """
+
+
+#--------------------------------------------------------------------------------------------------------------------
+#                                            FONCTION PRINCIPALE
+#--------------------------------------------------------------------------------------------------------------------
+
 def algo_naif(pattern, texte):
     #Tableau de résultats
     occurences = []
@@ -15,13 +32,12 @@ def algo_naif(pattern, texte):
 
         #si aucun de mismatch trouvé c'est qu'on a trouvé une occurence
         if trouve :
-            print("Trouvé!")
-            print(i)
             occurences.append(i)
 
     return occurences
 
 
+# -----------------------------------------------------------TEST-------------------------------------------------------------------
 texte_cinquieme_element = "En 1914 dans un temple en Égypte, un archéologue fait une grande découverte sur un combat contre le Mal absolu." \
         " Mais à ce moment-là, une équipe extraterrestre arrive sur le lieu pour embarquer quatre pierres représentant quatre " \
         "éléments et un être de forme humanoïde, un cinquième élément. En repartant, ils annoncent qu'ils reviennent dans 300 ans" \
@@ -34,4 +50,5 @@ texte_cinquieme_element = "En 1914 dans un temple en Égypte, un archéologue fa
 
 pattern = "Mal"
 
-print(algo_naif(pattern, texte_cinquieme_element))
+#print(algo_naif(pattern, texte_cinquieme_element))
+# [100, 404, 963]
